@@ -209,6 +209,57 @@ Open url http://dcode.com:8000 to login
     bench --site dcode.com install-app erpnext
     
     bench start
+
+### Step 16 setup production
+    
+    sudo bench setup production dcode-frappe
+    bench restart
+
+### If bench restart is not worked run the following command again with all Questions Yes
+    
+    sudo bench setup production dcode-frappe
+
+#### If above command not worked then reboot server and try it again
+
+### If keep failing then probably node is failing duet to nvm use. In this case check which node is used in next file:
+
+```sudo nano /etc/supervisor/conf.d/frappe-bench.conf```
+
+compare it to:
+
+```which node```
+
+If not matching than change the path to node in file and reload it:
+
+
+```sudo supervisorctl reread
+
+sudo supervisorctl update
+
+bench restart
+
+```
+
+    
+### If js and css file is not loading on login window run the following command
+
+    sudo chmod o+x /home/dcode-frappe
+
+    
+#### STEP 17 SSL certificate fot https
+    
+    sudo apt install certbot python3-certbot-nginx
+    sudo certbot -d {domain_name} --register-unsafely-without-email
+    
+   for auto renew the certificate check if certbot.timer is installed
+
+    sudo systemctl status certbot.timer
+
+
+   to check manually:
+   
+    sudo certbot renew --dry-run
+
     
     
 
