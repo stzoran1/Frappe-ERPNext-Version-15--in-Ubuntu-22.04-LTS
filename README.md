@@ -54,6 +54,13 @@ Ensure Firewall is properly set and non root user is added:
 
 https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-22-04
 
+Ensure ports 80 and 443 are open:
+
+```
+sudo ufw allow 80
+sudo ufw allow 443
+```
+
 
 ### STEP 1 Install git
     sudo apt-get install git
