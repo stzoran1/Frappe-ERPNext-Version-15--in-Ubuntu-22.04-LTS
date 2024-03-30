@@ -218,6 +218,8 @@ Open url http://dcode.com:8000 to login
     bench start
 
 ### Step 16 setup production
+
+!!!IMPORTANT: dcode-frappe is name of non-root user. If your user is named differently, change this accordingly.
     
     sudo bench setup production dcode-frappe
     bench restart
