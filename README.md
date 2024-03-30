@@ -64,7 +64,7 @@ https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubunt
 
 ### STEP 3 Install setuptools and pip (Python's Package Manager).
 
-    sudo apt-get install python3.11-setuptools python3.11-pip
+    sudo apt-get install python3-setuptools python3-pip
 
 ### STEP 4 Install virtualenv
     
