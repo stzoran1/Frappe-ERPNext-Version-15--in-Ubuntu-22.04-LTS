@@ -256,7 +256,7 @@ bench restart
     sudo chmod o+x /home/dcode-frappe
 
     
-#### STEP 17 SSL certificate fot https
+### STEP 17 SSL certificate fot https
     
     sudo apt install certbot python3-certbot-nginx
     sudo certbot -d {domain_name} --register-unsafely-without-email
@@ -269,6 +269,18 @@ bench restart
    to check manually:
    
     sudo certbot renew --dry-run
+
+
+### STEP 18 installing HRMS
+
+```
+bench get-app hrms --branch version-15
+
+bench --site dcode.com install-app hrms
+
+bench restart
+
+```
 
     
     
