@@ -232,7 +232,8 @@ compare it to:
 If not matching than change the path to node in file and reload it:
 
 
-```sudo supervisorctl reread
+```
+sudo supervisorctl reread
 
 sudo supervisorctl update
 
